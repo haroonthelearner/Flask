@@ -1,0 +1,27 @@
+What is Flask?
+
+Flask is a framework for building web applications using the Python programming language.
+What is RESTful API?
+
+An API (Application Programming Interface) is a way for different software programs to talk to each other. RESTful means it follows certain principles (like using standard HTTP methods).
+What is Flask-RESTful?
+
+Flask-RESTful is an extension for Flask that makes it easier to build APIs with Flask. It helps organize your code and handle common tasks related to APIs.
+What is a Resource?
+
+Think of a resource as something your API deals with. It could be a person, a product, or any other concept in your application.
+HTTP Methods (GET, POST, etc.):
+
+These are like actions you can perform on the resources. For example, GET is used to retrieve information, POST is used to create something new, and so on.
+Routing and Endpoints:
+
+Think of endpoints as unique addresses for different parts of your API. It's like saying, "If you want information about X, go to this URL."
+Request Parsing:
+
+When someone sends data to your API (like filling out a form), Flask-RESTful helps you easily understand and use that data.
+Error Handling:
+
+If something goes wrong (like the user asks for information that doesn't exist), Flask-RESTful helps you respond with a helpful message instead of crashing.
+Authentication and Authorization:
+
+Imagine a bouncer at a club. They check your ID (authentication) to make sure you're allowed in. Flask-RESTful helps you add these checks to your API.

@@ -1,0 +1,33 @@
+1. Schemas:
+Definition: A schema in Marshmallow is a class that defines the structure and format of your data. It specifies how your Python objects should be converted into a serialized format (marshalling) and how to deserialize incoming data (unmarshalling).
+
+2. Fields:
+Definition: Fields are the building blocks of a schema. Each field in a schema corresponds to a property or attribute in your data structure. Marshmallow provides various field types (e.g., Str, Int, List, Nested) to handle different data types and structures.
+
+3. Serialization (Marshalling):
+Definition: Serialization is the process of converting a Python object into a format suitable for storage or transmission (e.g., JSON). In Marshmallow, this is done using the dump method of a schema.
+
+
+4. Deserialization (Unmarshalling):
+Definition: Deserialization is the process of converting data in a serialized format back into a Python object. In Marshmallow, this is done using the load method of a schema.
+
+5. Nested Fields:
+Definition: Marshmallow supports nested fields to handle complex data structures. You can use fields.Nested to include one schema within another.
+
+
+6. Data Validation:
+Definition: Marshmallow allows you to define validation rules for your fields. You can use built-in validators or custom validation functions.
+
+class PersonSchema(Schema):
+    name = fields.Str(validate=lambda x: len(x) > 0)
+    age = fields.Int(validate=lambda x: x > 0)
+class PersonSchema(Schema):
+    name = fields.Str(validate=lambda x: len(x) > 0)
+    age = fields.Int(validate=lambda x: x > 0)
+
+7. Meta Class:
+Definition: The Meta class within a schema allows you to define metadata for the schema. It includes options like specifying additional output formats (json, xml) or custom options.
+
+
+8. Pre and Post Processing:
+Definition: Marshmallow provides decorators (@pre_load, @post_load, @pre_dump, @post_dump) to perform pre and post-processing steps during serialization and deserialization.
